@@ -29,6 +29,6 @@ $product->setTypeId(
     Status::STATUS_ENABLED
 );
 
-$productRepository = Bootstrap::getObjectManager()->get(ProductRepositoryInterface::class);
+$productRepository = Bootstrap::getObjectManager()->create(ProductRepositoryInterface::class);
 
 $productRepository->save($product);
